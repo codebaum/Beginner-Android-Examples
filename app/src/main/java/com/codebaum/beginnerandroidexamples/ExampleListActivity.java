@@ -8,8 +8,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.codebaum.beginnerandroidexamples.examples.HelloLubbockActivity;
-import com.codebaum.beginnerandroidexamples.examples.HelloWorldActivity;
+import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloLubbockActivity;
+import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloResourcesActivity;
+import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloWorldActivity;
+import com.codebaum.beginnerandroidexamples.examples.intents.ExplicitIntentActivity;
+import com.codebaum.beginnerandroidexamples.examples.intents.ImplicitIntentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +31,9 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
         List<String> exampleItems = new ArrayList<>();
         exampleItems.add("Hello, World!");
         exampleItems.add("Hello, Lubbock!");
+        exampleItems.add("Hello, Resources!");
+        exampleItems.add("Explicit Intent");
+        exampleItems.add("Implicit Intent");
 
         // Starting from API 26 (Oreo, 8.0), it's no longer necessary to cast this.
         RecyclerView list = (RecyclerView) findViewById(R.id.list);
@@ -49,6 +55,17 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
                 break;
             case 1:
                 intent = new Intent(this, HelloLubbockActivity.class);
+                startActivity(intent);
+                break;
+            case 2:
+                intent = new Intent(this, HelloResourcesActivity.class);
+                startActivity(intent);
+            case 3:
+                intent = new Intent(this, ExplicitIntentActivity.class);
+                startActivity(intent);
+                break;
+            case 4:
+                intent = new Intent(this, ImplicitIntentActivity.class);
                 startActivity(intent);
                 break;
             default:
