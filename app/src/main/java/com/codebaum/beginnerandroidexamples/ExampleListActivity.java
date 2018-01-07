@@ -6,13 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
 import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloLubbockActivity;
 import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloResourcesActivity;
 import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloWorldActivity;
 import com.codebaum.beginnerandroidexamples.examples.intents.ExplicitIntentActivity;
 import com.codebaum.beginnerandroidexamples.examples.intents.ImplicitIntentActivity;
+import com.codebaum.beginnerandroidexamples.examples.kotlin.HelloKotlinActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,17 +23,20 @@ import java.util.List;
 
 public class ExampleListActivity extends AppCompatActivity implements ExampleListAdapter.Callback {
 
+    private List<ExampleItem> exampleItems;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_examples_list);
 
-        List<String> exampleItems = new ArrayList<>();
-        exampleItems.add("Hello, World!");
-        exampleItems.add("Hello, Lubbock!");
-        exampleItems.add("Hello, Resources!");
-        exampleItems.add("Explicit Intent");
-        exampleItems.add("Implicit Intent");
+        exampleItems = new ArrayList<>();
+        exampleItems.add(ExampleItem.HELLO_WORLD);
+        exampleItems.add(ExampleItem.HELLO_LUBBOCK);
+        exampleItems.add(ExampleItem.HELLO_RESOURCES);
+        exampleItems.add(ExampleItem.EXPLICIT_INTENT);
+        exampleItems.add(ExampleItem.IMPLICIT_INTENT);
+        exampleItems.add(ExampleItem.HELLO_KOTLIN);
 
         // Starting from API 26 (Oreo, 8.0), it's no longer necessary to cast this.
         RecyclerView list = (RecyclerView) findViewById(R.id.list);
@@ -47,29 +50,34 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
 
     @Override
     public void onItemSelected(int position) {
-        Intent intent;
-        switch (position) {
-            case 0:
-                intent = new Intent(this, HelloWorldActivity.class);
-                startActivity(intent);
-                break;
-            case 1:
-                intent = new Intent(this, HelloLubbockActivity.class);
-                startActivity(intent);
-                break;
-            case 2:
-                intent = new Intent(this, HelloResourcesActivity.class);
-                startActivity(intent);
-            case 3:
-                intent = new Intent(this, ExplicitIntentActivity.class);
-                startActivity(intent);
-                break;
-            case 4:
-                intent = new Intent(this, ImplicitIntentActivity.class);
-                startActivity(intent);
-                break;
-            default:
-                Toast.makeText(this, "Error: invalid item", Toast.LENGTH_SHORT).show();
+        Class intentClass = exampleItems.get(position).getIntentClass();
+        Intent intent = new Intent(this, intentClass);
+        startActivity(intent);
+    }
+
+    enum ExampleItem {
+
+        HELLO_WORLD("Hello, World!", HelloWorldActivity.class),
+        HELLO_LUBBOCK("Hello, Lubbock!", HelloLubbockActivity.class),
+        HELLO_RESOURCES("Hello, Resources!", HelloResourcesActivity.class),
+        EXPLICIT_INTENT("Explicit Intent", ExplicitIntentActivity.class),
+        IMPLICIT_INTENT("Implicit Intent", ImplicitIntentActivity.class),
+        HELLO_KOTLIN("Hello, Kotlin!", HelloKotlinActivity.class);
+
+        private final String title;
+        private final Class intentClass;
+
+        ExampleItem(String title, Class intentClass) {
+            this.title = title;
+            this.intentClass = intentClass;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public Class getIntentClass() {
+            return intentClass;
         }
     }
 }

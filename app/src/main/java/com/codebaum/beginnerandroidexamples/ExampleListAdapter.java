@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.codebaum.beginnerandroidexamples.ExampleListActivity.ExampleItem;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,10 +21,10 @@ public class ExampleListAdapter extends RecyclerView.Adapter<ExampleListAdapter.
         void onItemSelected(int position);
     }
 
-    private final List<String> exampleItems = new ArrayList<>();
+    private final List<ExampleItem> exampleItems = new ArrayList<>();
     private final Callback itemSelectedCallback;
 
-    public ExampleListAdapter(List<String> exampleItems, Callback itemSelectedCallback) {
+    public ExampleListAdapter(List<ExampleItem> exampleItems, Callback itemSelectedCallback) {
         this.exampleItems.addAll(exampleItems);
         this.itemSelectedCallback = itemSelectedCallback;
     }
@@ -38,7 +40,7 @@ public class ExampleListAdapter extends RecyclerView.Adapter<ExampleListAdapter.
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        String itemTitle = exampleItems.get(position);
+        String itemTitle = exampleItems.get(position).getTitle();
         holder.titleView.setText(itemTitle);
     }
 

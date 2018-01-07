@@ -20,16 +20,23 @@ public class ImplicitIntentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example_implicit_intent);
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button buttonWebsite = findViewById(R.id.button_website);
+        buttonWebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String meetupUrl = "https://www.meetup.com/Lubbock-Software-Development-Meetup";
-                Uri meetupUri = Uri.parse(meetupUrl);
-                Intent intent = new Intent(Intent.ACTION_VIEW, meetupUri);
+                Uri website = Uri.parse("https://www.meetup.com/Lubbock-Software-Development-Meetup");
+                Intent intent = new Intent(Intent.ACTION_VIEW, website);
                 startActivity(intent);
+            }
+        });
 
-                // Pay attention to the Up/Back actions after clicking this button.
+        Button mapsButton = findViewById(R.id.button_maps);
+        mapsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri location = Uri.parse("geo:0,0?q=1215+Ave+J,+Lubbock,+Texas");
+                Intent intent = new Intent(Intent.ACTION_VIEW, location);
+                startActivity(intent);
             }
         });
     }

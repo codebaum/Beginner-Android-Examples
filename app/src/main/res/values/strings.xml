@@ -3,4 +3,6 @@
     <string name="hello_world">Hello, World!</string>
     <string name="open_new_activity">Open New Activity</string>
     <string name="open_website">Open Website</string>
+    <string name="open_maps">Open Maps</string>
+    <string name="hello_kotlin">Hello, Kotlin!</string>
 </resources>
