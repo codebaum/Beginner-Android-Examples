@@ -7,12 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloLubbockActivity;
-import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloResourcesActivity;
-import com.codebaum.beginnerandroidexamples.examples.helloworld.HelloWorldActivity;
-import com.codebaum.beginnerandroidexamples.examples.intents.ExplicitIntentActivity;
-import com.codebaum.beginnerandroidexamples.examples.intents.ImplicitIntentActivity;
-import com.codebaum.beginnerandroidexamples.examples.kotlin.HelloKotlinActivity;
+import com.codebaum.beginnerandroidexamples.examples.TitledActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,34 +45,10 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
 
     @Override
     public void onItemSelected(int position) {
-        Class intentClass = exampleItems.get(position).getIntentClass();
+        ExampleItem exampleItem = exampleItems.get(position);
+        Class intentClass = exampleItem.getIntentClass();
         Intent intent = new Intent(this, intentClass);
+        intent.putExtra(TitledActivity.KEY_TITLE_RES_ID, exampleItem.getTitleResId());
         startActivity(intent);
-    }
-
-    enum ExampleItem {
-
-        HELLO_WORLD("Hello, World!", HelloWorldActivity.class),
-        HELLO_LUBBOCK("Hello, Lubbock!", HelloLubbockActivity.class),
-        HELLO_RESOURCES("Hello, Resources!", HelloResourcesActivity.class),
-        EXPLICIT_INTENT("Explicit Intent", ExplicitIntentActivity.class),
-        IMPLICIT_INTENT("Implicit Intent", ImplicitIntentActivity.class),
-        HELLO_KOTLIN("Hello, Kotlin!", HelloKotlinActivity.class);
-
-        private final String title;
-        private final Class intentClass;
-
-        ExampleItem(String title, Class intentClass) {
-            this.title = title;
-            this.intentClass = intentClass;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public Class getIntentClass() {
-            return intentClass;
-        }
     }
 }

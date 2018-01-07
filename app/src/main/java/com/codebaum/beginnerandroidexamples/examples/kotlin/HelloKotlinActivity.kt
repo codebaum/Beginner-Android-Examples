@@ -1,14 +1,14 @@
 package com.codebaum.beginnerandroidexamples.examples.kotlin
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import com.codebaum.beginnerandroidexamples.R
+import com.codebaum.beginnerandroidexamples.examples.TitledActivity
 
 /**
  * Created on 1/7/18.
  */
-class HelloKotlinActivity : AppCompatActivity() {
+class HelloKotlinActivity : TitledActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

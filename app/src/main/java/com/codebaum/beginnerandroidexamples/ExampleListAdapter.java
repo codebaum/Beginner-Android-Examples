@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.codebaum.beginnerandroidexamples.ExampleListActivity.ExampleItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,8 +38,8 @@ public class ExampleListAdapter extends RecyclerView.Adapter<ExampleListAdapter.
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        String itemTitle = exampleItems.get(position).getTitle();
-        holder.titleView.setText(itemTitle);
+        int itemTitleResId = exampleItems.get(position).getTitleResId();
+        holder.titleView.setText(itemTitleResId);
     }
 
     @Override

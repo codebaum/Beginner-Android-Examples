@@ -5,4 +5,8 @@
     <string name="open_website">Open Website</string>
     <string name="open_maps">Open Maps</string>
     <string name="hello_kotlin">Hello, Kotlin!</string>
+    <string name="hello_lubbock">Hello, Lubbock!</string>
+    <string name="hello_resources">Hello, Resources!</string>
+    <string name="explicit_intent">Explicit Intent</string>
+    <string name="implicit_intent">Implicit Intent</string>
 </resources>
