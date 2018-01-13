@@ -17,13 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".examples.helloworld.HelloWorldActivity"
-            android:parentActivityName=".ExampleListActivity"/>
-        <activity
-            android:name=".examples.helloworld.HelloLubbockActivity"
-            android:parentActivityName=".ExampleListActivity"/>
-        <activity
-            android:name=".examples.helloworld.HelloResourcesActivity"
+            android:name=".examples.HelloWorldActivity"
             android:parentActivityName=".ExampleListActivity"/>
         <activity
             android:name=".examples.intents.ExplicitIntentActivity"

@@ -7,8 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.codebaum.beginnerandroidexamples.examples.TitledActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,8 +25,6 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
 
         exampleItems = new ArrayList<>();
         exampleItems.add(ExampleItem.HELLO_WORLD);
-        exampleItems.add(ExampleItem.HELLO_LUBBOCK);
-        exampleItems.add(ExampleItem.HELLO_RESOURCES);
         exampleItems.add(ExampleItem.EXPLICIT_INTENT);
         exampleItems.add(ExampleItem.IMPLICIT_INTENT);
         exampleItems.add(ExampleItem.HELLO_KOTLIN);
@@ -48,7 +44,6 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
         ExampleItem exampleItem = exampleItems.get(position);
         Class intentClass = exampleItem.getIntentClass();
         Intent intent = new Intent(this, intentClass);
-        intent.putExtra(TitledActivity.KEY_TITLE_RES_ID, exampleItem.getTitleResId());
         startActivity(intent);
     }
 }
