@@ -30,13 +30,15 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
         exampleItems.add(ExampleItem.HELLO_KOTLIN);
 
         // Starting from API 26 (Oreo, 8.0), it's no longer necessary to cast this.
-        RecyclerView list = (RecyclerView) findViewById(R.id.list);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
 
+        // RecyclerView requires a layout manager.
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        list.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);
 
+        // RecyclerView requires an adapter.
         ExampleListAdapter adapter = new ExampleListAdapter(exampleItems, this);
-        list.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
     @Override

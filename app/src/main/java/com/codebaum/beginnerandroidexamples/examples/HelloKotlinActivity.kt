@@ -1,9 +1,11 @@
-package com.codebaum.beginnerandroidexamples.examples.kotlin
+package com.codebaum.beginnerandroidexamples.examples
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.TextView
 import com.codebaum.beginnerandroidexamples.R
+
+// similar to ButterKnife (view injection library for java)
+import kotlinx.android.synthetic.main.activity_example_hello_world.*
 
 /**
  * Created on 1/7/18.
@@ -16,7 +18,10 @@ class HelloKotlinActivity : AppCompatActivity() {
 
         setTitle(R.string.hello_kotlin)
 
-        val textView = findViewById<TextView>(R.id.textView)
+        // where is the findViewById? See "apply plugin: 'kotlin-android-extensions'" in app build.gradle
         textView.setText(R.string.hello_kotlin)
+        textView2.setText(R.string.hello_kotlin)
+        textView3.setText(R.string.hello_kotlin)
+        textView4.setText(R.string.hello_kotlin)
     }
 }

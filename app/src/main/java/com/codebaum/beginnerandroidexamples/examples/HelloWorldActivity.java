@@ -8,9 +8,8 @@ import android.widget.TextView;
 import com.codebaum.beginnerandroidexamples.R;
 
 /**
- * Created on 1/7/18.
+ * Basic example of updating text and utilizing string resources.
  */
-
 public class HelloWorldActivity extends AppCompatActivity {
 
     @Override
@@ -22,7 +21,7 @@ public class HelloWorldActivity extends AppCompatActivity {
 
         // Change the value of the second TextView by updating the text value with a String.
         TextView textView2 = findViewById(R.id.textView2);
-        textView2.setText("Hello, Lubbock!");
+        textView2.setText("Hello, Lubbock!"); // we see a warning because this should be a localized string.
 
         // Change the value of the second TextView by updating the text value with a string resource id.
         TextView textView4 = findViewById(R.id.textView4);

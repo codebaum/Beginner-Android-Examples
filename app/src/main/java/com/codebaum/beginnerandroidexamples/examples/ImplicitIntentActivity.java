@@ -1,4 +1,4 @@
-package com.codebaum.beginnerandroidexamples.examples.intents;
+package com.codebaum.beginnerandroidexamples.examples;
 
 import android.content.Intent;
 import android.net.Uri;
