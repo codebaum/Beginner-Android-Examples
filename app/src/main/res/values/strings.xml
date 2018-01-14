@@ -7,6 +7,8 @@
     <string name="open_website">Open Website</string>
     <string name="open_maps">Open Maps</string>
     <string name="hello_kotlin">Hello, Kotlin!</string>
+    <string name="why_kotlin">Why Kotlin?</string>
+    <string name="why_not_java">Why Not Java?</string>
     <string name="hello_lubbock">Hello, Lubbock!</string>
     <string name="hello_resources">Hello, Resources!</string>
     <string name="explicit_intent">Explicit Intent</string>
@@ -14,4 +16,8 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="finish">Finish</string>
+    <string name="string_and_length">Length of \"%1$s\": %2$d</string>
+    <string name="default_text_value">Default Text Value</string>
+    <string name="show_toast">Show Toast</string>
+    <string name="show_game_details">Show Game Details</string>
 </resources>

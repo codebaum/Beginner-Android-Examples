@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Hello, World!"
+        android:text="@string/hello_kotlin"
         android:textColor="@color/colorPrimary"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
@@ -26,7 +26,7 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:text="Hello, World!"
+        android:text="We need to change this"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"/>
 
@@ -38,7 +38,7 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:text="@string/hello_world"
+        android:text="@string/hello_kotlin"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"/>
 

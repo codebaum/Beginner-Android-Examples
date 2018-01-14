@@ -17,7 +17,7 @@ public class HelloWorldActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example_hello_world);
 
-        setTitle("Hello, World");
+        setTitle(R.string.hello_world);
 
         // Change the value of the second TextView by updating the text value with a String.
         TextView textView2 = findViewById(R.id.textView2);
@@ -26,5 +26,9 @@ public class HelloWorldActivity extends AppCompatActivity {
         // Change the value of the second TextView by updating the text value with a string resource id.
         TextView textView4 = findViewById(R.id.textView4);
         textView4.setText(R.string.hello_lubbock);
+
+        // same as above
+        String text = getResources().getString(R.string.hello_lubbock);
+        textView4.setText(text);
     }
 }

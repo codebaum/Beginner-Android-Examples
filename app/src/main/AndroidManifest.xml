@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codebaum.beginnerandroidexamples">
+<manifest package="com.codebaum.beginnerandroidexamples"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -11,25 +11,29 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ExampleListActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".examples.HelloWorldActivity"
-            android:parentActivityName=".ExampleListActivity" />
+            android:parentActivityName=".ExampleListActivity"/>
         <activity
             android:name=".examples.ExplicitIntentActivity"
-            android:parentActivityName=".ExampleListActivity" />
+            android:parentActivityName=".ExampleListActivity"/>
         <activity
             android:name=".examples.ImplicitIntentActivity"
-            android:parentActivityName=".ExampleListActivity" />
+            android:parentActivityName=".ExampleListActivity"/>
         <activity
             android:name=".examples.HelloKotlinActivity"
-            android:parentActivityName=".ExampleListActivity" />
-        <activity android:name=".FinishActivity"
-            android:parentActivityName=".examples.ExplicitIntentActivity" />
+            android:parentActivityName=".ExampleListActivity"/>
+        <activity
+            android:name=".FinishActivity"
+            android:parentActivityName=".examples.ExplicitIntentActivity"/>
+        <activity android:name=".examples.WhyKotlinActivity"/>
+        <activity android:name=".examples.WhyNotJavaActivity">
+        </activity>
     </application>
 
 </manifest>
