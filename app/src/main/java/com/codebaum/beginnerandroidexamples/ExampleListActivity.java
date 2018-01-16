@@ -25,6 +25,7 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
 
         exampleItems = new ArrayList<>();
         exampleItems.add(ExampleItem.HELLO_WORLD);
+        exampleItems.add(ExampleItem.BASIC_VIEWS);
         exampleItems.add(ExampleItem.EXPLICIT_INTENT);
         exampleItems.add(ExampleItem.IMPLICIT_INTENT);
         exampleItems.add(ExampleItem.HELLO_KOTLIN);

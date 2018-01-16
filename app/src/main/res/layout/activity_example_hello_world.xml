@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/hello_kotlin"
+        android:text="@string/hello_world"
         android:textColor="@color/colorPrimary"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
@@ -39,6 +39,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
         android:text="@string/hello_kotlin"
+        tools:text="Not Hello, World"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"/>
 

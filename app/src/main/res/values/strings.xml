@@ -20,4 +20,9 @@
     <string name="default_text_value">Default Text Value</string>
     <string name="show_toast">Show Toast</string>
     <string name="show_game_details">Show Game Details</string>
+    <string name="basic_views">Basic Views</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sample_sign_in">Sample Sign In</string>
+    <string name="sign_in">SIGN IN</string>
 </resources>

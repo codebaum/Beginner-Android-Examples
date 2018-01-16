@@ -27,7 +27,7 @@ public class HelloWorldActivity extends AppCompatActivity {
         TextView textView4 = findViewById(R.id.textView4);
         textView4.setText(R.string.hello_lubbock);
 
-        // same as above
+        // same as above, except we get the string from our resources first and then pass it to the TextView.
         String text = getResources().getString(R.string.hello_lubbock);
         textView4.setText(text);
     }

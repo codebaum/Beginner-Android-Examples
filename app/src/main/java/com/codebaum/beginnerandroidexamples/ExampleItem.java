@@ -2,12 +2,7 @@ package com.codebaum.beginnerandroidexamples;
 
 import android.support.annotation.StringRes;
 
-import com.codebaum.beginnerandroidexamples.examples.WhyKotlinActivity;
-import com.codebaum.beginnerandroidexamples.examples.HelloWorldActivity;
-import com.codebaum.beginnerandroidexamples.examples.ExplicitIntentActivity;
-import com.codebaum.beginnerandroidexamples.examples.ImplicitIntentActivity;
-import com.codebaum.beginnerandroidexamples.examples.HelloKotlinActivity;
-import com.codebaum.beginnerandroidexamples.examples.WhyNotJavaActivity;
+import com.codebaum.beginnerandroidexamples.examples.*;
 
 /**
  * Created on 1/7/18.
@@ -15,6 +10,7 @@ import com.codebaum.beginnerandroidexamples.examples.WhyNotJavaActivity;
 enum ExampleItem {
 
     HELLO_WORLD(R.string.hello_world, HelloWorldActivity.class),
+    BASIC_VIEWS(R.string.basic_views, BasicViewsActivity.class),
     EXPLICIT_INTENT(R.string.explicit_intent, ExplicitIntentActivity.class),
     IMPLICIT_INTENT(R.string.implicit_intent, ImplicitIntentActivity.class),
     ACTIVITY_LIFECYCLE(R.string.explicit_intent, ExplicitIntentActivity.class),

@@ -34,6 +34,7 @@
         <activity android:name=".examples.WhyKotlinActivity"/>
         <activity android:name=".examples.WhyNotJavaActivity">
         </activity>
+        <activity android:name=".examples.BasicViewsActivity"/>
     </application>
 
 </manifest>

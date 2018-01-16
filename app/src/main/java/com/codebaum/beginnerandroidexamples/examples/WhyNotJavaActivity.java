@@ -47,7 +47,7 @@ public class WhyNotJavaActivity extends AppCompatActivity {
 
         // 5. manual data class implementations
         JavaVideoGame game = new JavaVideoGame("Madden", "EA", 90);
-        final JavaVideoGame updatedGame = new JavaVideoGame("Madden", "EA", 88);
+        final JavaVideoGame updatedGame = new JavaVideoGame(game.getName(), game.getPublisher(), 88);
         Button buttonVideoGame = findViewById(R.id.button_video_game);
         buttonVideoGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +56,7 @@ public class WhyNotJavaActivity extends AppCompatActivity {
             }
         });
 
-        // 6. lack of smart casts
+        // 6. redundant casting
         SmartCast smartCast = SmartCast.Companion.getRandom();
         if (smartCast instanceof SmartCast.SubSmartCast1) {
             ((SmartCast.SubSmartCast1) smartCast).returnTest1String();

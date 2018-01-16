@@ -33,14 +33,14 @@ class WhyKotlinActivity : AppCompatActivity() {
             quickToast("This is my Kotlin toast!")
         }
 
-        // 4. built-in data class implementation
+        // 5. built-in data class implementation
         val game = KotlinVideoGame("Madden", "EA", 90)
         val updatedGame = game.copy(reviewScore = 88)
         button_video_game.setOnClickListener {
             quickToast("Review Score: ${updatedGame.reviewScore}") // example of string template
         }
 
-        // 5. smart casts make code more readable
+        // 6. smart casts make code more readable
         val smartCast = SmartCast.random
         when (smartCast) {
             is SmartCast.SubSmartCast1 -> smartCast.returnTest1String()
