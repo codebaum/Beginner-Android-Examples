@@ -13,7 +13,7 @@ enum ExampleItem {
     BASIC_VIEWS(R.string.basic_views, BasicViewsActivity.class),
     EXPLICIT_INTENT(R.string.explicit_intent, ExplicitIntentActivity.class),
     IMPLICIT_INTENT(R.string.implicit_intent, ImplicitIntentActivity.class),
-    ACTIVITY_LIFECYCLE(R.string.explicit_intent, ExplicitIntentActivity.class),
+    ACTIVITY_LIFECYCLE(R.string.activity_lifecycle, ActivityLifecycleActivity.class),
     FRAGMENTS(R.string.implicit_intent, ImplicitIntentActivity.class),
     HELLO_KOTLIN(R.string.hello_kotlin, HelloKotlinActivity.class),
     WHY_KOTLIN(R.string.why_kotlin, WhyKotlinActivity.class),

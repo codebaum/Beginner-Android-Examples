@@ -35,6 +35,7 @@
         <activity android:name=".examples.WhyNotJavaActivity">
         </activity>
         <activity android:name=".examples.BasicViewsActivity"/>
+        <activity android:name=".examples.ActivityLifecycleActivity"/>
     </application>
 
 </manifest>
