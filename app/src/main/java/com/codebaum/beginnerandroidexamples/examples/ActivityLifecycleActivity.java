@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SwitchCompat;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.codebaum.beginnerandroidexamples.R;
+
+import java.util.UUID;
 
 import butterknife.*;
 
@@ -15,8 +18,16 @@ import butterknife.*;
  */
 public class ActivityLifecycleActivity extends AppCompatActivity {
 
+    private static final String KEY_SAVED_LOGS = "KEY_SAVED_LOGS";
+
+    private static final String TAG = ActivityLifecycleActivity.class.getSimpleName();
+
+    private String uuid;
+
     @BindView(R.id.tv_logs_value)
     TextView logsView;
+
+    private boolean usingGoodBehavior;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,6 +37,14 @@ public class ActivityLifecycleActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setTitle(R.string.activity_lifecycle);
+
+        // generate a random string in order to identify Activity instances in our logs
+        uuid = UUID.randomUUID().toString().substring(0, 8);
+
+        if (savedInstanceState != null) {
+            String formerLogs = savedInstanceState.getString(KEY_SAVED_LOGS);
+            logsView.setText(formerLogs);
+        }
 
         addLogMessage("onCreate() called");
     }
@@ -42,6 +61,15 @@ public class ActivityLifecycleActivity extends AppCompatActivity {
         super.onResume();
 
         addLogMessage("onResume() called");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        if (usingGoodBehavior) {
+            outState.putString(KEY_SAVED_LOGS, logsView.getText().toString());
+        }
     }
 
     @Override
@@ -67,17 +95,18 @@ public class ActivityLifecycleActivity extends AppCompatActivity {
 
     @OnCheckedChanged(R.id.switch_good_behavior)
     void onGoodBehaviorCheckedChanged(SwitchCompat view) {
-        addLogMessage(view.isChecked() ? "Using good behavior." : "Using bad behavior.");
 
-        // TODO: 1/16/18 handle good behavior and rotating app 
+        usingGoodBehavior = view.isChecked();
+
+        addLogMessage(usingGoodBehavior ? "Using good behavior." : "Using bad behavior.");
     }
 
     private void addLogMessage(String message) {
         String currentLogs = logsView.getText().toString();
-        StringBuilder sb = new StringBuilder(currentLogs);
-        sb.append("\n");
-        sb.append(message);
-        String newLogs = sb.toString();
+        String newMessage = uuid + " - " + message;
+        String newLogs = currentLogs + "\n" + newMessage;
         logsView.setText(newLogs);
+
+        Log.d(TAG, "log: " + newMessage);
     }
 }

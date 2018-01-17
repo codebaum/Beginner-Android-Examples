@@ -14,13 +14,14 @@ enum ExampleItem {
     EXPLICIT_INTENT(R.string.explicit_intent, ExplicitIntentActivity.class),
     IMPLICIT_INTENT(R.string.implicit_intent, ImplicitIntentActivity.class),
     ACTIVITY_LIFECYCLE(R.string.activity_lifecycle, ActivityLifecycleActivity.class),
-    FRAGMENTS(R.string.implicit_intent, ImplicitIntentActivity.class),
+    FRAGMENTS(R.string.fragments, FragmentsActivity.class),
     HELLO_KOTLIN(R.string.hello_kotlin, HelloKotlinActivity.class),
     WHY_KOTLIN(R.string.why_kotlin, WhyKotlinActivity.class),
     WHY_NOT_JAVA(R.string.why_not_java, WhyNotJavaActivity.class);
 
     @StringRes
     private final int titleResId;
+
     private final Class intentClass;
 
     ExampleItem(int titleResId, Class intentClass) {

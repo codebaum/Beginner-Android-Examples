@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.codebaum.beginnerandroidexamples.R;
 import com.codebaum.beginnerandroidexamples.data.JavaVideoGame;
-import com.codebaum.beginnerandroidexamples.data.SmartCast;
+import com.codebaum.beginnerandroidexamples.helpers.SmartCast;
 import com.codebaum.beginnerandroidexamples.utils.JavaUtils;
 
 @SuppressWarnings({"ConstantConditions", "FieldCanBeLocal"})

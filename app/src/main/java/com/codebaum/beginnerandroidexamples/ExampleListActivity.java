@@ -29,6 +29,7 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
         exampleItems.add(ExampleItem.EXPLICIT_INTENT);
         exampleItems.add(ExampleItem.IMPLICIT_INTENT);
         exampleItems.add(ExampleItem.ACTIVITY_LIFECYCLE);
+        exampleItems.add(ExampleItem.FRAGMENTS);
         exampleItems.add(ExampleItem.HELLO_KOTLIN);
         exampleItems.add(ExampleItem.WHY_KOTLIN);
         exampleItems.add(ExampleItem.WHY_NOT_JAVA);

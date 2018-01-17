@@ -27,4 +27,8 @@
     <string name="sign_in">SIGN IN</string>
     <string name="activity_lifecycle">Activity Lifecycle</string>
     <string name="label_logs">Logs:</string>
+    <string name="fragments">Fragments</string>
+    <string name="red_fragment_text">This is a RED fragment</string>
+    <string name="blue_fragment_text">This is a BLUE fragment</string>
+    <string name="change_fragments">Change Fragments</string>
 </resources>

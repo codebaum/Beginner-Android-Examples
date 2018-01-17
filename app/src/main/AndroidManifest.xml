@@ -36,6 +36,7 @@
         </activity>
         <activity android:name=".examples.BasicViewsActivity"/>
         <activity android:name=".examples.ActivityLifecycleActivity"/>
+        <activity android:name=".examples.FragmentsActivity"/>
     </application>
 
 </manifest>

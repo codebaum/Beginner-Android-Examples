@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.codebaum.beginnerandroidexamples.R
 import com.codebaum.beginnerandroidexamples.data.KotlinVideoGame
-import com.codebaum.beginnerandroidexamples.data.SmartCast
+import com.codebaum.beginnerandroidexamples.helpers.SmartCast
 import com.codebaum.beginnerandroidexamples.utils.quickToast
 import kotlinx.android.synthetic.main.activity_why_kotlin.*
 
