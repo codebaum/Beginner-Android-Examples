@@ -31,4 +31,5 @@
     <string name="red_fragment_text">This is a RED fragment</string>
     <string name="blue_fragment_text">This is a BLUE fragment</string>
     <string name="change_fragments">Change Fragments</string>
+    <string name="null_variable">Variable is null.</string>
 </resources>

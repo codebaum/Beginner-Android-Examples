@@ -9,8 +9,7 @@ import android.widget.*;
 
 import com.codebaum.beginnerandroidexamples.R;
 
-import butterknife.BindView;
-import butterknife.OnClick;
+import butterknife.*;
 
 /**
  * Basic example of updating text and utilizing string resources.
@@ -27,6 +26,8 @@ public class BasicViewsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_views);
+
+        ButterKnife.bind(this);
 
         setTitle(R.string.basic_views);
 

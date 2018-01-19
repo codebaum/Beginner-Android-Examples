@@ -11,9 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created on 1/7/18.
+ * Shows a list of examples. Each example launches a new activity.
  */
-
 public class ExampleListActivity extends AppCompatActivity implements ExampleListAdapter.Callback {
 
     private List<ExampleItem> exampleItems;
@@ -23,6 +22,7 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_examples_list);
 
+        // build our list of examples
         exampleItems = new ArrayList<>();
         exampleItems.add(ExampleItem.HELLO_WORLD);
         exampleItems.add(ExampleItem.BASIC_VIEWS);
@@ -31,8 +31,8 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
         exampleItems.add(ExampleItem.ACTIVITY_LIFECYCLE);
         exampleItems.add(ExampleItem.FRAGMENTS);
         exampleItems.add(ExampleItem.HELLO_KOTLIN);
-        exampleItems.add(ExampleItem.WHY_KOTLIN);
         exampleItems.add(ExampleItem.WHY_NOT_JAVA);
+        exampleItems.add(ExampleItem.WHY_KOTLIN);
 
         // Starting from API 26 (Oreo, 8.0), it's no longer necessary to cast this.
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
@@ -48,9 +48,17 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
 
     @Override
     public void onItemSelected(int position) {
+
+        // Get our example from the list.
         ExampleItem exampleItem = exampleItems.get(position);
+
+        // Get our class object from the example.
         Class intentClass = exampleItem.getIntentClass();
+
+        // Set up our intent to explicity open the associated class.
         Intent intent = new Intent(this, intentClass);
+
+        // Start our example's activity.
         startActivity(intent);
     }
 }

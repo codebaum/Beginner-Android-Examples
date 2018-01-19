@@ -3,19 +3,20 @@ package com.codebaum.beginnerandroidexamples.examples;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 
 import com.codebaum.beginnerandroidexamples.R;
 import com.codebaum.beginnerandroidexamples.data.JavaVideoGame;
 import com.codebaum.beginnerandroidexamples.helpers.SmartCast;
 import com.codebaum.beginnerandroidexamples.utils.JavaUtils;
 
+/**
+ * Java code to be compared against examples in {@link WhyKotlinActivity}
+ */
 @SuppressWarnings({"ConstantConditions", "FieldCanBeLocal"})
 public class WhyNotJavaActivity extends AppCompatActivity {
 
-    private String nullableVar = "alice";
+    private String nullableVar = "java";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,11 @@ public class WhyNotJavaActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.textView);
 
         // 2. results in "if (x != null) { ... }" in lots of places
-        nullableVar = "bob";
         if (nullableVar != null) {
-            textView.setText(nullableVar);
+            String formattedText = getString(R.string.string_and_length, nullableVar, nullableVar.length());
+            textView.setText(formattedText);
         } else {
-            Toast.makeText(this, "Error: value was null", Toast.LENGTH_SHORT).show();
+            textView.setText(R.string.null_variable);
         }
 
         // 3. no extension functions (custom util classes require knowing about them)

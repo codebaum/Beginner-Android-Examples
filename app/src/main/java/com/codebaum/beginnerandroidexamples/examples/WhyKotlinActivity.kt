@@ -9,11 +9,13 @@ import com.codebaum.beginnerandroidexamples.utils.quickToast
 import kotlinx.android.synthetic.main.activity_why_kotlin.*
 
 /**
- * Created on 1/7/18.
+ * Some examples of why Kotlin may be better than Java.
+ *
+ * https://kotlinlang.org/docs/reference/comparison-to-java.html
  */
 class WhyKotlinActivity : AppCompatActivity() {
 
-    private var neverNullVar: String = "alice"
+    private var neverNullVar: String = "kotlin"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +26,8 @@ class WhyKotlinActivity : AppCompatActivity() {
         // 1. no more findViewById -- see HelloKotlinActivity
 
         // 2. null safety (simple example, but often we don't know where values come from)
-        neverNullVar = "bob"
-        textView.text = neverNullVar
+        val formattedText = getString(R.string.string_and_length, neverNullVar, neverNullVar.length)
+        textView.text = formattedText
 
         // 3. extension functions supported natively
         // 4. lambda functions supported natively
@@ -48,7 +50,5 @@ class WhyKotlinActivity : AppCompatActivity() {
             is SmartCast.SubSmartCast2 -> smartCast.returnTest2String()
             is SmartCast.SubSmartCast3 -> smartCast.returnTest3String()
         }
-
-        // More: https://kotlinlang.org/docs/reference/comparison-to-java.html
     }
 }
