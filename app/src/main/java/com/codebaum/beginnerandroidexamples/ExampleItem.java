@@ -17,7 +17,8 @@ enum ExampleItem {
     FRAGMENTS(R.string.fragments, FragmentsActivity.class),
     HELLO_KOTLIN(R.string.hello_kotlin, HelloKotlinActivity.class),
     WHY_NOT_JAVA(R.string.why_not_java, WhyNotJavaActivity.class),
-    WHY_KOTLIN(R.string.why_kotlin, WhyKotlinActivity.class);
+    WHY_KOTLIN(R.string.why_kotlin, WhyKotlinActivity.class),
+    ADVANCED(R.string.advanced, AdvancedActivity.class);
 
     @StringRes
     private final int titleResId;

@@ -9,6 +9,7 @@
     <string name="hello_kotlin">Hello, Kotlin!</string>
     <string name="why_kotlin">Why Kotlin?</string>
     <string name="why_not_java">Why Not Java?</string>
+    <string name="advanced">Advanced</string>
     <string name="hello_lubbock">Hello, Lubbock!</string>
     <string name="hello_resources">Hello, Resources!</string>
     <string name="explicit_intent">Explicit Intent</string>

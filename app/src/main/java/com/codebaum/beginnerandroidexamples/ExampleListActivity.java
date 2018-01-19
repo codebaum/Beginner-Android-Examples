@@ -33,6 +33,7 @@ public class ExampleListActivity extends AppCompatActivity implements ExampleLis
         exampleItems.add(ExampleItem.HELLO_KOTLIN);
         exampleItems.add(ExampleItem.WHY_NOT_JAVA);
         exampleItems.add(ExampleItem.WHY_KOTLIN);
+        exampleItems.add(ExampleItem.ADVANCED);
 
         // Starting from API 26 (Oreo, 8.0), it's no longer necessary to cast this.
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
