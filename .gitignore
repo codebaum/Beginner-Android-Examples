@@ -1,3 +1,6 @@
+# api keys
+app/src/main/res/values/secret.xml
+
 # Built application files
 *.apk
 *.ap_
