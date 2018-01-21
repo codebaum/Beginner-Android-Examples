@@ -1,10 +1,12 @@
 package com.codebaum.beginnerandroidexamples.darksky;
 
+import java.io.Serializable;
+
 /**
  *
  */
 
-public class DarkSky {
+public class DarkSky implements Serializable {
     private String timezone;
 
     private Currently currently;

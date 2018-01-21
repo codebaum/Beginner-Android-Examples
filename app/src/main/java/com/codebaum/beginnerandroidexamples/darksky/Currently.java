@@ -1,10 +1,12 @@
 package com.codebaum.beginnerandroidexamples.darksky;
 
+import java.io.Serializable;
+
 /**
  *
  */
 
-public class Currently {
+public class Currently implements Serializable {
     private String summary;
 
     private String windGust;

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    tools:context="com.codebaum.beginnerandroidexamples.ExampleListActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_current_location"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_text_current"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_random_location"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_text_random"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tv_detail_margin"
+        android:layout_marginTop="@dimen/tv_detail_margin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:text="Current temp: 52.43"/>
+
+    <TextView
+        android:id="@+id/tv_detail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tv_detail_margin"
+        android:layout_marginTop="@dimen/tv_detail_margin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:text="Current temp: 52.43"/>
+
+    <TextView
+        android:id="@+id/tv_detail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tv_detail_margin"
+        android:layout_marginTop="@dimen/tv_detail_margin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:text="Current temp: 52.43"/>
+
+    <ImageView
+        android:id="@+id/iv_detail4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/tv_detail_margin"
+        android:layout_marginTop="@dimen/tv_detail_margin"
+        android:contentDescription="@string/cd_weather_icon"
+        android:scaleType="centerCrop"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:src="@drawable/icons8_sun_96"/>
+
+    <TextView
+        android:id="@+id/tv_detail5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tv_detail_margin"
+        android:layout_marginTop="@dimen/tv_detail_margin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:text="Current temp: 52.43"/>
+
+    <TextView
+        android:id="@+id/tv_detail6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/tv_detail_margin"
+        android:layout_marginTop="@dimen/tv_detail_margin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        tools:text="Current temp: 52.43"/>
+
+</LinearLayout>

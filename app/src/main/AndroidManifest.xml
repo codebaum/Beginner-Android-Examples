@@ -41,7 +41,8 @@
         <activity android:name=".examples.BasicViewsActivity"/>
         <activity android:name=".examples.ActivityLifecycleActivity"/>
         <activity android:name=".examples.FragmentsActivity"/>
-        <activity android:name=".examples.AdvancedActivity"/>
+        <activity android:name=".examples.WeatherDetailsActivity"/>
+        <activity android:name=".examples.WeatherListActivity"/>
     </application>
 
 </manifest>

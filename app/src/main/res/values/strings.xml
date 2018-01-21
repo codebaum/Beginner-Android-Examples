@@ -9,7 +9,8 @@
     <string name="hello_kotlin">Hello, Kotlin!</string>
     <string name="why_kotlin">Why Kotlin?</string>
     <string name="why_not_java">Why Not Java?</string>
-    <string name="advanced">Advanced</string>
+    <string name="advanced_details">Advanced - Weather Details</string>
+    <string name="advanced_list">Advanced - Weather List</string>
     <string name="hello_lubbock">Hello, Lubbock!</string>
     <string name="hello_resources">Hello, Resources!</string>
     <string name="explicit_intent">Explicit Intent</string>
@@ -33,4 +34,15 @@
     <string name="blue_fragment_text">This is a BLUE fragment</string>
     <string name="change_fragments">Change Fragments</string>
     <string name="null_variable">Variable is null.</string>
+    <string name="rationale_location">Location required for accurate weather information.</string>
+    <string name="label_temperature">Temperature: %s</string>
+    <string name="label_wind_speed">Wind Speed: %s mph</string>
+    <string name="label_wind_bearing">Wind Bearing: %s</string>
+    <string name="cd_weather_icon">Weather Icon</string>
+    <string name="label_precip_probability">Chance of precipitation: %s%%</string>
+    <string name="label_summary">Summary: %s</string>
+    <string name="btn_text_current">Current Location</string>
+    <string name="btn_text_random">Random Location</string>
+    <string name="requested_location">Location: %.2f, %.2f</string>
+    <string name="request_title">(%.02f,%.02f)</string>
 </resources>
